@@ -1,0 +1,676 @@
+@import url("reset.css");
+@import url("fonts.css");
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #212121;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.burger-menu {
+    display: none;
+    width: 30px;
+    height: 20px;
+    margin-left: auto;
+    position: relative;
+    cursor: pointer;
+}
+
+.burger-menu::before, .burger-menu::after, .burger-menu span {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 4px;
+    background: #000;
+}
+
+.burger-menu span {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.burger-menu::after {
+    top: auto;
+    bottom: 0;
+}
+
+.hidden {
+    position: absolute;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+.btn {
+    display: inline-block;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    background: #2196F3;
+    padding: 17px;
+    min-width: 200px;
+    cursor: pointer;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.btn:hover {
+    background: #1574c2;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+}
+
+.header {
+    padding: 25px 0;
+    font-weight: 500;
+    border-bottom: 1px solid #ECECEC;
+    position: relative;
+}
+
+.header-logo {
+    margin-right: 90px;
+}
+
+.header-nav {
+    display: flex;
+    gap: 70px;
+    position: relative;
+    align-items: center;
+}
+
+.header-nav a {
+    color: #212121;
+    text-decoration: none;
+    justify-content: center;
+}
+
+.header-info a:hover, .header-nav a:hover, .info-d a:hover {
+    color: #2196F3;
+}
+
+.header-nav a.active {
+    color: #2196F3;
+}
+
+.header-list {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.header-info {
+    margin: 0 auto;
+}
+
+.header-info a {
+    color: #757575;
+    text-decoration: none;
+}
+
+.hero {
+    min-height: 600px;
+    background: linear-gradient(rgba(0,0,0, .3), rgba(0,0,0, .7)), url('../img/Img.jpg') no-repeat center/cover;
+    color: #fff;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-title {
+    font-size: 44px;
+    line-height: 60px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+}
+
+.hero-box {
+    text-align: center;
+    max-width: 696px;
+    margin: 0 auto;
+}
+
+.hero-box h1, button {
+    position: relative;
+    z-index: 1;
+}
+
+.about {
+    padding: 94px 0;
+}
+
+.about-boxes {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.about-box {
+    flex: 1 1 22%;
+    padding-top: 150px;
+    position: relative;
+}
+
+.about-box::before {
+    background: #F5F4FA url('../img/Group1.svg') no-repeat 50%/70px auto;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    border-radius: 6px;
+}
+
+.about-box+.about-box::before {
+    background: #F5F4FA url('../img/Group2.svg') no-repeat 50%/70px auto;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    border-radius: 6px;
+}
+
+.about-box+.about-box+.about-box::before {
+    background: #F5F4FA url('../img/Group3.svg') no-repeat 50%/70px auto;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    border-radius: 6px;
+}
+
+.about-box+.about-box+.about-box+.about-box::before {
+    background: #F5F4FA url('../img/Group4.svg') no-repeat 50%/70px auto;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    border-radius: 6px;
+}
+
+.dlogo {
+    padding: 16px 30px 32px 32px;
+    position: relative;
+}
+
+.dlogo a {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    padding: 12px 12px;
+    background-position: center;
+}
+
+.dlogo a:hover {
+    background: #2b93e9;
+    border-radius: 50%;
+    fill: #FFFFFF;
+        transition: all .5s ease-out;
+}
+
+.dlogo a:hover svg{
+    fill: #FFFFFF;
+        transition: all .5s ease-out;
+}
+
+.dlogo>ul {
+    display: flex;
+    gap: 10px;
+}
+
+.about-title {
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.about-p {
+    color: #757575;
+    line-height: 25px;
+}
+
+.three {
+padding: 94px 0;
+}
+
+.three-title {
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 36px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.three-two {
+    display: flex;
+    gap: 30px;
+}
+
+.cards {
+    display: flex;
+    gap: 30px;
+    position: relative;
+}
+
+.cards img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    object-fit: cover;
+    position: relative;
+}
+
+.last {
+    background: #F5F4FA;
+    padding: 94px 0;
+}
+
+.last-title {
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 36px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.last-box {
+    display: flex;
+    gap: 30px;
+
+}
+
+.last-img {
+    background: #fff;
+    box-shadow: 2px 3px 5px 2px #00000024;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    flex: 1 1 23%;
+}
+
+.last-desc {
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.last-h3 {
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.last-p {
+    color: #757575;
+    font-weight: 400px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.dow {
+    margin: 0 auto;
+    margin-bottom: 34px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.dow-btn {
+    display: inline-block;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    background: #2196F3;
+    padding: 6px;
+    min-width: 73px;
+    cursor: pointer;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.dow-btn1 {
+    display: inline-block;
+    color: #212121;
+    font-size: 16px;
+    font-weight: 500;
+    background: #F5F4FA;
+    padding: 11px 25px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.dow-btn:hover {
+    background: #0d538c;
+}
+
+.dow-btn1:hover {
+background: #b6b4c2;
+}
+
+.dflex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.imgp2 {
+    margin-bottom: 20px;
+    height: 294px;
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.h3p2 {
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+    height: 36px;
+}
+
+.pp2 {
+    font-weight: 400;
+    color: #757575;
+    font-size: 16px;
+}
+
+.divp2 {
+    padding: 20px 24px;
+}
+
+.bordp2 {
+    outline: 1px solid #EEEEEE;
+    flex: 1 1 30%;
+    position: relative;
+}
+
+.bordp2 img {
+    width: 100%;
+    height: 294px;
+    object-fit: cover;
+}
+
+.test {
+    height: 294px;
+    position: relative;
+}
+
+.test img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+
+.box {
+    background: rgba(33, 150, 243, 0.9);
+    color: #fff;
+    position: absolute;
+    inset: 0;
+    padding: 24px;
+    align-items: center;
+    display: none;
+    font-size: 18px;
+    line-height: 28px;
+
+}
+
+.bordp2:hover .box {
+    display: flex;
+}
+
+.cards:hover .cards-desc {
+    display: block;
+}
+
+.cards-desc {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(47, 48, 58, 0.8);
+    padding: 20px 10px;
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    display: none;
+}
+
+.submenu {
+    position: relative;
+}
+
+.submenu ul {
+    z-index: 5;
+}
+
+.submenu>ul {
+    position: absolute;
+    display: none;
+    padding: 25px 0 0;
+    min-width: 150px;
+    top: 100%;
+    left: 0;
+}
+
+.submenu .submenu>ul{
+    top: 0;
+    right: 100%;
+    z-index: 2;
+}
+
+.submenu a {
+    color: white;
+    display: block;
+    background-color: #1574c2;
+    border-radius: 6px;
+    margin-bottom: 2px;
+    padding: 10px 10px ;
+}
+
+.submenu.a-submenu {
+    background: inherit;
+    color: black;
+}
+
+.submenu:hover>ul {
+    display: block;
+}
+
+.info-d {
+    text-decoration: none;
+    position: relative;
+}
+
+.info-d>ul {
+    position: absolute;
+    display: none;
+    padding: 25px 0 0 0;
+}
+
+.info-d a {
+    color: white;
+    display: block;
+    text-decoration: none;
+    background-color: #1574c2;
+    border-radius: 6px;
+    margin-bottom: 2px;
+    padding: 10px 10px;
+}
+
+.info-d:hover>ul {
+    display: block;
+    z-index: 5;
+}
+
+.dlogofoot a {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    background-position: center;
+    padding: 12px 12px;
+}
+
+.dlogofoot a:hover {
+    background: #2196F3;
+    border-radius: 50%;
+    transition: all .5s linear;
+}
+
+.dlogofoot>ul {
+    display: flex;
+    gap: 10px;
+}
+
+.footer {
+    background: #2F303A;
+    min-height: 252px;
+    display: block;
+}
+
+.img-footer {
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.footer-out {
+    color: #FFFFFF;
+}
+
+.footer-out2 {
+    color: #FFF;
+    display: block;
+    margin-bottom: 9px;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.footer-a {
+    display: block;
+}
+
+.footer-a a{
+    font-weight: 400;
+    font-size: 14px;
+    margin: 9px 0;
+    display: block;
+    text-decoration: none;
+    color: #FFFFFF99;
+}
+
+.footer-a a:hover {
+    color: #2196F3;
+}
+
+.footdiv1 {
+    width: 231px;
+}
+
+.footdiv1, .footdiv2 {
+    display: inline-block;
+}
+
+.blockfoot {
+    display: flex;
+}
+
+.footdiv2 {
+    padding: 62px 72px;
+}
+
+.footh3 {
+    padding: 10px 0px 20px 0;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.iconwhite {
+    fill: #FFFFFF;
+}
+
+.iconAFB1B8 {
+    fill: #AFB1B8;
+}
+
+.iconAFB1B8106x60 {
+    width: 106px;
+    height: 60px;
+    fill: #AFB1B8;
+}
+
+.fox{
+    display: flex;
+    gap: 30px;
+    cursor: pointer;
+}
+
+.fox li {
+    flex: 1 1 16%;
+    border: 1px solid #AFB1B8;
+    border-radius: 6px;
+    padding: 16px 32px;
+    min-width: 0;
+}
+
+.fox li:hover svg {
+    fill: #d6e4f0;
+    transition: all 1s linear;
+}
+
+.fox li:hover {
+    fill: #2196F3;
+    background: #2196F3;
+    border: 1px solid #2196F3;
+    transition: all 1s linear;
+    }
+
+    @media  screen and (max-width: 1000px) {
+    .header-nav{display: none;}
+    .header-logo{margin-right: 30px;}
+    .header-nav{gap: 30px;}
+    .about-box {flex: 1 1 25%;}
+}
+
+        @media  screen and (max-width:768px) {
+    .burger-menu { display: block;}
+    .info-d {display: none;}
+    .hero-title {font-style: 26px; line-height: 42px;}
+    .hero-box, {min-height: 400px;}
+    .about-box {flex: 1 1 33%;}
+    .about, .three {padding: 60px 0;}
+    }
+
+        @media  screen and (max-width:375px) {
+    .hero-title {font-style: 26px;
+        line-height: 42px;}
+    .hero-box, {min-height: 400px;}
+    .about-box {flex: 1 1 100%;}
+    .about, .three {padding: 60px 0;}
+    }
