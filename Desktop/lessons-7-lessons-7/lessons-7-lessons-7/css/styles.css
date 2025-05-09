@@ -266,26 +266,32 @@ padding: 94px 0;
 
 .three-two {
     display: flex;
-    gap: 30px;
+    flex-wrap: wrap;
+    margin: 0 -15px;
 }
 
 .cards {
     display: flex;
-    gap: 30px;
+    flex: 1 1 33%;
+    padding: 0 15px;
+}
+
+.cards > div {
     position: relative;
+    overflow: hidden;
+    height: 294px;
 }
 
 .cards img {
     width: 100%;
     height: 100%;
-    overflow: hidden;
     object-fit: cover;
-    position: relative;
 }
 
 .last {
     background: #F5F4FA;
     padding: 94px 0;
+    display: flex;
 }
 
 .last-title {
@@ -299,7 +305,7 @@ padding: 94px 0;
 .last-box {
     display: flex;
     gap: 30px;
-
+    overflow: hidden;
 }
 
 .last-img {
@@ -307,8 +313,11 @@ padding: 94px 0;
     box-shadow: 2px 3px 5px 2px #00000024;
     border-bottom-right-radius: 6px;
     border-bottom-left-radius: 6px;
-    flex: 1 1 23%;
+    display: flex;
+    flex-wrap: wrap;
 }
+
+.image {width: 100%;}
 
 .last-desc {
     margin: 0 auto;
@@ -325,7 +334,7 @@ padding: 94px 0;
 
 .last-p {
     color: #757575;
-    font-weight: 400px;
+    font-weight: 400;
     text-align: center;
     font-size: 16px;
 }
@@ -655,25 +664,60 @@ background: #b6b4c2;
     .header-nav{display: none;}
     .header-logo{margin-right: 30px;}
     .header-nav{gap: 30px;}
+
     .about-box {flex: 1 1 25%;}
+    .three-two { row-gap: 30px;}
+    
+    .last-box {flex-wrap: wrap;}
+    .last-img {flex: 1 1 45%; height: 622px; justify-content: center;}
+    .image {width: 100%; height: 460px;}
+    .spacer { text-align: center;}
+    .dlogo {padding: 0; margin-bottom: 24px;}
+    .three {display: none;}
+
+    .blockfoot {flex-direction: column; align-items: center;}
+    .footh3,.footdiv1 {text-align: center;}
 }
 
-        @media  screen and (max-width:768px) {
+    @media  screen and (max-width:768px) {
     .burger-menu { display: block;}
     .info-d {display: none;}
     .hero-title {font-style: 26px; line-height: 42px;}
     .hero-box, {min-height: 400px;}
     .about-box {flex: 1 1 33%;}
     .about, .three {padding: 60px 0;}
+    .hero-title, .about-p {font-size: 14px;}
+    .cards { flex-basis: 50%;justify-content: center;}
+    .last-title {font-size: 28px;}
+
+    .last-box {flex-wrap: wrap;}
+    .last-img {flex: 1 1 45%;; justify-content: center;}
+    .image {width: 100%;}
+    .spacer { text-align: center;}
+    .dlogo {padding: 0; margin-bottom: 24px;}
+
+    .three {display: none;}
+    .blockfoot {flex-direction: column; align-items: center;}
+    .footh3,.footdiv1 {text-align: center;}
     }
 
-        @media  screen and (max-width:375px) {
-    .hero-title {font-style: 26px;
-        line-height: 42px;}
-    .hero-box, {min-height: 400px;}
+
+
+
+    @media  screen and (max-width:480px) {
+    .hero-title {font-style: 26px;line-height: 42px;}
+    .hero-box {min-height: 400px;}
     .about-box {flex: 1 1 100%;}
     .about, .three {padding: 60px 0;}
-    }
-    dsmnajs{
-        as
+    .hero-title, .about-p {font-size: 14px;}
+    .cards { flex-basis: 100%;justify-content: center;}
+
+        .last-box {flex-wrap: wrap;}
+    .last-img {flex: 1 1 100%; height: 622px; justify-content: center;}
+    .image {width: 100%; height: 460px;}
+    .spacer { text-align: center;}
+    .dlogo {padding: 0; margin-bottom: 24px;}
+    .three {display: none;}
+    .blockfoot {flex-direction: column; align-items: center;}
+    .footh3,.footdiv1 {text-align: center;}
     }
